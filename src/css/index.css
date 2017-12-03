@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #6bdbcb;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+#header {
+    display: block;
+    height: 25vh;
+}
+
+#header #cet4 {
+    display: block;
+    float: right;
+    width: 94vw;
+    margin-top: 3em;
+}
+
+#header #Vector {
+    display: block;
+    float: left;
+    width: 30vw;
+    margin-top: 2em;
+}
+
+#main {
+    display: block;
+    text-align: center;
+    height: 60vh;
+}
+
+#main #section {
+    display: inline-block;
+    width: 94%;
+}
+
+#main #button {
+    display: inline-block;
+    width: 50%;
+    cursor: pointer;
+}
+
+#footer {
+    display: block;
+    position: fixed;
+    z-index: -1;
+    bottom: 0;
+    width: 100vw;
+}
+
+#footer #david {
+    display: block;
+    float: left;
+    width: 42vw;
+}
+
+#footer #silent {
+    display: block;
+    float: left;
+    width: 40vw;
+    padding-top: 2em;
+}
+
+#footer #ww {
+    display: block;
+    float: right;
+    width: 10vw;
+}
