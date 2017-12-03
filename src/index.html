@@ -17,12 +17,29 @@
                 <img src="./img/Vector@1x.png">
             </picture>
         </header>
+        <div class="clear"></div>
         <main id="main">
-            <picture id="section">
-                <source media="(max-width: 374px)" srcset="./img/section@1x.png">
-                <source media="(min-width: 375px)" srcset="./img/section@2x.png">
-                <img src="./img/section@1x.png">
-            </picture>
+            <div id="section">
+                <!-- 你的名字 -->
+                <div class="field">
+                    <picture id="name">
+                        <source media="(max-width: 374px)" srcset="./img/name@1x.png">
+                        <source media="(min-width: 375px)" srcset="./img/name@2x.png">
+                        <img src="./img/name@1x.png">
+                    </picture>
+                    <input type="text"/>
+                </div>
+                <!-- 守护老师 -->
+                <div class="field">
+                    <picture id="teacher">
+                        <source media="(max-width: 374px)" srcset="./img/teacher@1x.png">
+                        <source media="(min-width: 375px)" srcset="./img/teacher@2x.png">
+                        <img src="./img/teacher@1x.png">
+                    </picture>
+                    <input type="text"/>
+                </div>
+            </div>
+            <!-- 预测一下 -->
             <picture id="button">
                 <source media="(max-width: 374px)" srcset="./img/button@1x.png">
                 <source media="(min-width: 375px)" srcset="./img/button@2x.png">
