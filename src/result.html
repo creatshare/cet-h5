@@ -6,49 +6,52 @@
         <link rel="stylesheet" href="./css/result@750px.css" media="all and (min-width: 750px)">
         <link rel="stylesheet" href="./css/result@749px.css" media="all and (max-width: 749px)">
         <script src="./js/_base.js"></script>
+        <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
     </head>
     <body>
-        <main id="rMain">
-            <div id="result">
-                <section id="resBody">
-                    <!-- 预测印章 -->
-                    <picture id="status">
-                        <source media="(max-width: 749px)" srcset="./img/loser@1x.png">
-                        <source media="(min-width: 750px)" srcset="./img/loser@2x.png">
-                        <img src="./img/loser@2x.png">
-                    </picture>
-                    <!-- 你的 CET 预测结果 -->
-                    <h1>姬无命 CET4 预测结果</h1>
-                    <!-- 预测随机文案 -->
-                    <p><span>你是不是</span><span>比国家总理都忙，</span><b>下次再来吧！</b></p>
-                </section>
-                <section id="resFooter">
-                    <div id="resLeft">
-                        <p>哎，<br/>你的守护老师都飞走了</p>
-                    </div>
-                    <div id="resRight">
-                        <picture id="qr">
-                            <source media="(max-width: 749px)" srcset="./img/qr@1x.png">
-                            <source media="(min-width: 750px)" srcset="./img/qr@2x.png">
-                            <img src="./img/qr@2x.png">
+        <div id="rScreen">
+            <main id="rMain">
+                <div id="result">
+                    <section id="resBody">
+                        <!-- 预测印章 -->
+                        <picture id="status">
+                            <source media="(max-width: 749px)" srcset="./img/loser@1x.png">
+                            <source media="(min-width: 750px)" srcset="./img/loser@2x.png">
+                            <img src="./img/loser@2x.png">
                         </picture>
-                        <span>扫码预测</span>
-                    </div>
-                </section>
-            </div>
-            <!-- 长按图片保存结果 -->
-            <picture id="save">
-                <source media="(max-width: 749px)" srcset="./img/save@1x.png">
-                <source media="(min-width: 750px)" srcset="./img/save@2x.png">
-                <img src="./img/save@2x.png">
-            </picture>
-        </main>
-        <footer id="rFooter">
-            <picture id="mmmm">
-                <source media="(max-width: 749px)" srcset="./img/mmmm@1x.png">
-                <source media="(min-width: 750px)" srcset="./img/mmmm@2x.png">
-                <img src="./img/mmmm@2x.png">
-            </picture>
-        </footer>
+                        <!-- 你的 CET 预测结果 -->
+                        <h1>姬无命 CET4 预测结果</h1>
+                        <!-- 预测随机文案 -->
+                        <p><span>你是不是</span><span>比国家总理都忙，</span><b>下次再来吧！</b></p>
+                    </section>
+                    <section id="resFooter">
+                        <div id="resLeft">
+                            <p>哎，<br/>你的守护老师都飞走了</p>
+                        </div>
+                        <div id="resRight">
+                            <picture id="qr">
+                                <source media="(max-width: 749px)" srcset="./img/qr@1x.png">
+                                <source media="(min-width: 750px)" srcset="./img/qr@2x.png">
+                                <img src="./img/qr@2x.png">
+                            </picture>
+                            <span>扫码预测</span>
+                        </div>
+                    </section>
+                </div>
+                <!-- 长按图片保存结果 -->
+                <picture id="save">
+                    <source media="(max-width: 749px)" srcset="./img/save@1x.png">
+                    <source media="(min-width: 750px)" srcset="./img/save@2x.png">
+                    <img src="./img/save@2x.png">
+                </picture>
+            </main>
+            <footer id="rFooter">
+                <picture id="mmmm">
+                    <source media="(max-width: 749px)" srcset="./img/mmmm@1x.png">
+                    <source media="(min-width: 750px)" srcset="./img/mmmm@2x.png">
+                    <img src="./img/mmmm@2x.png">
+                </picture>
+            </footer>
+        </div>
     </body>
 </html>
