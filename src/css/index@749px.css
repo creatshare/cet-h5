@@ -1,0 +1,177 @@
+html {
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #6bdbcb;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.clear {
+    clear: both;
+}
+
+#header {
+    display: block;
+    height: 25vh;
+}
+
+#header #cet4 {
+    display: block;
+    float: right;
+    margin-top: 3em;
+    width: 92vw;
+}
+
+#header #cet4 img {
+    width: 100%;
+}
+
+#header #Vector {
+    display: block;
+    float: left;
+    width: 30vw;
+    margin-top: 2em;
+}
+
+#main {
+    display: block;
+    height: 60vh;
+    margin-top: 1em;
+}
+
+#main #section {
+    height: 33.3vh;
+    text-align: center;
+    background-image: url(../img/section@2x.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 96vw 33.3vh;
+}
+
+#main .fieldWrap {
+    height: 60%;
+    width: 100%;
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#main .field {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 88%;
+}
+
+#main .field picture {
+    display: inline-block;
+    height: 7vh;
+}
+
+#main .field picture img {
+    height: 4vh;
+    width: auto;
+    position: relative;
+    top: 1vh;
+}
+
+#main .field input {
+    display: inline-block;
+    height: 7vh;
+    width: 45%;
+    border: #333 solid 7px;
+    border-radius: 12px;
+    margin-left: 1em;
+    font-size: 24px;
+}
+
+/* 449px 以下时的输入框内容 */
+@media all and (max-width: 319px) {
+    #main .field {
+        display: block;
+    }
+
+    #main .field picture {
+        display: block;
+        height: 5.5vh;
+    }
+
+    #main .field picture img {
+        height: 4vh;
+        width: auto;
+        max-width: 88%;
+        position: relative;
+        top: 1vh;
+    }
+
+    #main .field input {
+        display: block;
+        margin: 0 auto;
+        width: 88%;
+        border: #333 solid 5px;
+        position: relative;
+        right: 3px;
+    }
+}
+
+#main #button {
+    display: inline-block;
+    width: 100vw;
+    text-align: center;
+    margin-top: 1em;
+}
+
+#main #button img {
+    cursor: pointer;
+    width: 45%;
+    min-width: 144px;
+}
+
+#footer {
+    display: block;
+    position: fixed;
+    z-index: -2;
+    bottom: 0;
+    width: 100vw;
+}
+
+#footer #david {
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+#footer #david img {
+    position: fixed;
+    bottom: 0;
+}
+
+#footer #silent {
+    display: block;
+    float: right;
+    padding-top: 3em;
+    width: 40%;
+}
+
+#footer #silent img {
+    height: 20vh;
+    width: auto;
+}
+
+#footer #ww {
+    display: block;
+    float: right;
+    width: 10vw;
+    width: 10%;
+}

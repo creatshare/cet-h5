@@ -39,23 +39,27 @@ body {
 }
 
 #main #section {
-    height: 40vh;
+    height: 440px;
     text-align: center;
     background-image: url('../img/section@2x.png');
     background-position: top;
     background-repeat: no-repeat;
-    background-size: 96vw auto;
+    background-size: 720px auto;
 }
 
-@media all and (min-width: 700px) {
-    #main #section {
-        background-size: 672px auto;
-    }
+#main .fieldWrap {
+    height: 60%;
+    width: 100%;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #main .field {
-    display: block;
-    padding-top: 4vh;
+    flex: 1;
+    width: 720px;
 }
 
 #main .field picture {
@@ -66,7 +70,7 @@ body {
     height: 4vh;
     width: auto;
     position: relative;
-    top: 2vh;
+    top: 1vh;
 }
 
 #main .field input {
@@ -74,20 +78,21 @@ body {
     height: 7vh;
     width: 45%;
     border: #333 solid 7px;
-    border-radius: 1em;
-    margin-left: 4em;
+    border-radius: 12px;
+    margin-left: 2em;
+    font-size: 24px;
 }
 
 #main #button {
     display: inline-block;
     width: 100vw;
-    cursor: pointer;
     text-align: center;
     margin-top: 2em;
 }
 
 #main #button img {
-    width: 100px;
+    cursor: pointer;
+    width: 270px;
 }
 
 #footer {
@@ -101,14 +106,22 @@ body {
 #footer #david {
     display: block;
     float: left;
-    width: 42vw;
+}
+
+#footer #david img {
+    height: 30vh;
+    width: auto;
 }
 
 #footer #silent {
     display: block;
-    float: left;
-    width: 40vw;
-    padding-top: 2em;
+    float: right;
+    padding-top: 3em;
+}
+
+#footer #silent img {
+    height: 20vh;
+    width: auto;
 }
 
 #footer #ww {
