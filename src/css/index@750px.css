@@ -1,44 +1,28 @@
-body {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #6bdbcb;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-}
-
-.clear {
-    clear: both;
-}
-
-#header {
+#iHeader {
     display: block;
     height: 25vh;
 }
 
-#header #cet4 {
+#iHeader #cet4 {
     display: block;
     float: right;
     margin-top: 3em;
 }
 
-#header #Vector {
+#iHeader #Vector {
     display: block;
     float: left;
     width: 30vw;
     margin-top: 2em;
 }
 
-#main {
+#iMain {
     display: block;
     height: 60vh;
     margin-top: 4em;
 }
 
-#main #section {
+#iMain #section {
     height: 440px;
     text-align: center;
     background-image: url('../img/section@2x.png');
@@ -47,7 +31,7 @@ body {
     background-size: 720px auto;
 }
 
-#main .fieldWrap {
+#iMain .fieldWrap {
     height: 60%;
     width: 100%;
     padding-top: 100px;
@@ -57,45 +41,45 @@ body {
     flex-direction: column;
 }
 
-#main .field {
+#iMain .field {
     flex: 1;
     width: 720px;
 }
 
-#main .field picture {
+#iMain .field picture {
     display: inline-block;
 }
 
-#main .field img {
+#iMain .field img {
     height: 4vh;
     width: auto;
     position: relative;
     top: 1vh;
 }
 
-#main .field input {
+#iMain .field input {
     display: inline-block;
     height: 7vh;
     width: 45%;
-    border: #333 solid 7px;
+    border: #333 solid 5px;
     border-radius: 12px;
     margin-left: 2em;
     font-size: 24px;
 }
 
-#main #button {
+#iMain #button {
     display: inline-block;
     width: 100vw;
     text-align: center;
     margin-top: 2em;
 }
 
-#main #button img {
+#iMain #button img {
     cursor: pointer;
     width: 270px;
 }
 
-#footer {
+#iFooter {
     display: block;
     position: fixed;
     z-index: -2;
@@ -103,28 +87,28 @@ body {
     width: 100vw;
 }
 
-#footer #david {
+#iFooter #david {
     display: block;
     float: left;
 }
 
-#footer #david img {
+#iFooter #david img {
     height: 30vh;
     width: auto;
 }
 
-#footer #silent {
+#iFooter #silent {
     display: block;
     float: right;
     padding-top: 3em;
 }
 
-#footer #silent img {
+#iFooter #silent img {
     height: 20vh;
     width: auto;
 }
 
-#footer #ww {
+#iFooter #ww {
     display: block;
     float: right;
     width: 10vw;

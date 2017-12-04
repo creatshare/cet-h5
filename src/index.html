@@ -2,11 +2,13 @@
     <head>
         <title>测测你英语四六级能过嘛</title>
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="./css/index@750px.css" media="all and (min-width: 749px)">
+        <link rel="stylesheet" href="./css/_base.css">
+        <link rel="stylesheet" href="./css/index@750px.css" media="all and (min-width: 750px)">
         <link rel="stylesheet" href="./css/index@749px.css" media="all and (max-width: 749px)">
+        <script src="./js/_base.js"></script>
     </head>
     <body>
-        <header id="header">
+        <header id="iHeader">
             <!-- 测测你四级能过嘛 -->
             <picture id="cet4">
                 <source media="(max-width: 749px)" srcset="./img/cet4@1x.png">
@@ -21,7 +23,7 @@
             </picture>
         </header>
         <div class="clear"></div>
-        <main id="main">
+        <main id="iMain">
             <div id="section">
                 <div class="fieldWrap">
                     <!-- 你的名字 -->
@@ -48,10 +50,10 @@
             <picture id="button">
                 <source media="(max-width: 749px)" srcset="./img/button@1x.png">
                 <source media="(min-width: 750px)" srcset="./img/button@2x.png">
-                <img src="./img/button@2x.png">
+                <img src="./img/button@2x.png" onclick="postInfo()">
             </picture>
         </main>
-        <footer id="footer">
+        <footer id="iFooter">
             <picture id="david">
                 <source media="(max-width: 749px)" srcset="./img/david@1x.png">
                 <source media="(min-width: 750px)" srcset="./img/david@2x.png">
