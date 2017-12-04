@@ -1,33 +1,33 @@
-#header {
+#iHeader {
     display: block;
     height: 25vh;
 }
 
-#header #cet4 {
+#iHeader #cet4 {
     display: block;
     float: right;
     margin-top: 3em;
     width: 92vw;
 }
 
-#header #cet4 img {
+#iHeader #cet4 img {
     width: 100%;
 }
 
-#header #Vector {
+#iHeader #Vector {
     display: block;
     float: left;
     width: 30vw;
     margin-top: 2em;
 }
 
-#main {
+#iMain {
     display: block;
     height: 60vh;
     margin-top: 1em;
 }
 
-#main #section {
+#iMain #section {
     height: 33.3vh;
     text-align: center;
     background-image: url(../img/section@2x.png);
@@ -36,7 +36,7 @@
     background-size: 96vw 33.3vh;
 }
 
-#main .fieldWrap {
+#iMain .fieldWrap {
     height: 60%;
     width: 100%;
     padding-top: 25px;
@@ -46,7 +46,7 @@
     flex-direction: column;
 }
 
-#main .field {
+#iMain .field {
     flex: 1;
     display: flex;
     align-items: center;
@@ -54,19 +54,19 @@
     max-width: 88%;
 }
 
-#main .field picture {
+#iMain .field picture {
     display: inline-block;
     height: 7vh;
 }
 
-#main .field picture img {
+#iMain .field picture img {
     height: 4vh;
     width: auto;
     position: relative;
     top: 1vh;
 }
 
-#main .field input {
+#iMain .field input {
     display: inline-block;
     height: 7vh;
     width: 45%;
@@ -78,16 +78,16 @@
 
 /* 449px 以下时的输入框内容 */
 @media all and (max-width: 319px) {
-    #main .field {
+    #iMain .field {
         display: block;
     }
 
-    #main .field picture {
+    #iMain .field picture {
         display: block;
         height: 5.5vh;
     }
 
-    #main .field picture img {
+    #iMain .field picture img {
         height: 4vh;
         width: auto;
         max-width: 88%;
@@ -95,7 +95,7 @@
         top: 1vh;
     }
 
-    #main .field input {
+    #iMain .field input {
         display: block;
         margin: 0 auto;
         width: 88%;
@@ -105,20 +105,20 @@
     }
 }
 
-#main #button {
+#iMain #button {
     display: inline-block;
     width: 100vw;
     text-align: center;
     margin-top: 1em;
 }
 
-#main #button img {
+#iMain #button img {
     cursor: pointer;
     width: 45%;
     min-width: 144px;
 }
 
-#footer {
+#iFooter {
     display: block;
     position: fixed;
     z-index: -2;
@@ -126,30 +126,30 @@
     width: 100vw;
 }
 
-#footer #david {
+#iFooter #david {
     display: block;
     float: left;
     width: 50%;
 }
 
-#footer #david img {
+#iFooter #david img {
     position: fixed;
     bottom: 0;
 }
 
-#footer #silent {
+#iFooter #silent {
     display: block;
     float: right;
     padding-top: 3em;
     width: 40%;
 }
 
-#footer #silent img {
+#iFooter #silent img {
     height: 20vh;
     width: auto;
 }
 
-#footer #ww {
+#iFooter #ww {
     display: block;
     float: right;
     width: 10vw;
