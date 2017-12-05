@@ -112,12 +112,24 @@ function renderInfo () {
 // 将整个页面输出成图片
 function drawPage () {
     var rScreen = document.getElementById('rScreen')
+    // 要将 canvas 的宽高设置成容器宽高的 2 倍
+    var h = rScreen.offsetHeight * 2
+    var w = rScreen.offsetWidth * 2
+    // var canvas = document.createElement("canvas")
+    //     canvas.width = w * 2
+    //     canvas.height = h * 2
+    //     canvas.style.width = w + "px"
+    //     canvas.style.height = h + "px"
+    // 然后将画布缩放，将图像放大两倍画到画布上
+    // var context = canvas.getContext("2d")
+    // context.scale(2,2)
     html2canvas(rScreen, {
         // 允许读取 DOM 中的图片
-        allowTaint: true,
-        height: 1000
+        // canvas: canvas,
+        logging: true,
+        allowTaint: true
     }).then(function(canvas) {
         // 用图片替换 DOM 结点
         rScreen.parentNode.replaceChild(canvas, rScreen)
-    });
+    })
 }

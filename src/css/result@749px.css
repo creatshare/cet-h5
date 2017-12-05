@@ -1,5 +1,5 @@
 #rMain {
-    padding-top: 28px;
+    padding-top: 56px;
     width: 100vw;
     position: relative;
     z-index: 1;
@@ -95,7 +95,6 @@
 
 #rMain #result #resFooter #resRight span {
     display: block;
-    margin-top: 2px;
     font-size: 12px;
     text-align: center;
 }
