@@ -74,6 +74,8 @@
     border-radius: 12px;
     margin-left: 1em;
     font-size: 24px;
+    padding-left: 10px;
+    color: #333;
 }
 
 /* 449px 以下时的输入框内容 */

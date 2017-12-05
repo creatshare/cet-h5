@@ -20,34 +20,26 @@ function judgeLevel () {
     }
 }
 
-judgeLevel()
-
+// 保存相关信息到 localStorage 中
 function saveInfo (level, name, teacher) {
-
+    if (level) localStorage.setItem('level', level)
+    if (name) localStorage.setItem('name', name)
+    if (teacher) localStorage.setItem('teacher', teacher)
 }
 
 // 首页提交表单
 function postInfo () {
-    var name
-    var teacher
+    var name = document.getElementById('inputName').value.trim()
+    var teacher = document.getElementById('inputTeacher').value.trim()
+    if (!name) {
+        alert('请输入你的名字哈！')
+        return 
+    } else if (!teacher) {
+        alert('请输入守护老师的名字哈！')
+        return
+    }
     saveInfo(null, name, teacher)
     window.location.href = './result.html'
 }
 
-// 加载文案数据
-function loadData () {
-
-}
-
-// 将整个页面输出成图片
-function drawPage () {
-    var rScreen = document.getElementById('rScreen')
-    html2canvas(rScreen, {
-        // 允许读取 DOM 中的图片
-        allowTaint: true,
-        height: 1000
-    }).then(function(canvas) {
-        // 用图片替换 DOM 结点
-        rScreen.parentNode.replaceChild(canvas, rScreen)
-    });
-}
+window.onload = function () { judgeLevel() }
