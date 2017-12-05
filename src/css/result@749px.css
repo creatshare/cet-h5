@@ -1,6 +1,8 @@
 #rMain {
     padding-top: 28px;
     width: 100vw;
+    position: relative;
+    z-index: 1;
 }
 
 #rMain #result {
@@ -17,13 +19,13 @@
     height: 75%;
 }
 
-#rMain #result #resBody #status {
+#rMain #result #resBody .status {
     position: relative;
     float: right;
     width: 20%;
 }
 
-#rMain #result #resBody #status img {
+#rMain #result #resBody .status img {
     width: 100%;
     height: auto;
 }
@@ -37,20 +39,19 @@
 
 /* 预测随机文案 */
 #rMain #result #resBody p {
-    padding-top: 10%;
+    padding: 15% 1em 0 1em;
     text-align: center;
     line-height: 28px;
 }
 
 #rMain #result #resBody p span {
     display: block;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #rMain #result #resBody p b {
-    display: block;
     margin-top: 20px;
-    font-size: 30px;
+    font-size: 26px;
 }
 
 #rMain #result #resFooter {
@@ -66,6 +67,7 @@
     padding-left: 10px;
     padding-top: 10px;
     font-size: 16px;
+    width: 72%;
 }
 
 #rMain #result #resFooter #resLeft span {
@@ -77,22 +79,25 @@
     float: right;
     height: 100%;
     width: 24%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-#rMain #result #resFooter #resRight #qr {
+#rMain #result #resFooter #resRight .qr {
     display: block;
-    height: 70%;
+    height: 80%;
+    width: 100%;
+    text-align: center;
+}
+
+#rMain #result #resFooter #resRight .qr img {
+    height: 100%;
     width: auto;
 }
 
 #rMain #result #resFooter #resRight span {
     display: block;
-    margin-top: 6px;
-    font-size: 14px;
+    margin-top: 2px;
+    font-size: 12px;
+    text-align: center;
 }
 
 #rMain #save {
@@ -109,15 +114,16 @@
 
 #rFooter {
     position: fixed;
-    z-index: -1;
     bottom: 0;
     width: 100%;
 }
 
 #rFooter #mmmm {
+    height: 100%;
     width: 100%;
 }
 
 #rFooter #mmmm img {
+    height: auto;
     width: 100%;
 }

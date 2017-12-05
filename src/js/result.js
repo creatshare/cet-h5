@@ -13,7 +13,7 @@ window.onload = function () {
     assertLS()
     saveRandom ()
     renderInfo()
-    // drawPage()
+    drawPage()
 }
 
 // 首页加载时查看 localStorage 中是否有内容
@@ -38,7 +38,7 @@ function saveRandom () {
         var uRandom = Math.floor(Math.random() * uLD_MAX)
         // 输出至每一行
         uLoserData[uRandom].forEach(function (v) {
-            userText.innerHTML += v
+            userText.innerHTML += '<span>' + v + '</span>'
         })
         if (!tLoserData.hasOwnProperty(teacher)) {
             // 没有这个老师的相应文案时，使用第一条通用文案库，在其中随机文案
@@ -51,7 +51,7 @@ function saveRandom () {
             var tLD_MAX = tLoserData[teacher].length
             var tRandom = Math.floor(Math.random() * tLD_MAX)
             var tText = tLoserData[teacher][tRandom]
-            teacherText.innerHTML = tText
+            teacherText.innerHTML = '<span>' + tText + '</span>'
         }
         return
     } else {
@@ -62,11 +62,11 @@ function saveRandom () {
         var tRandom = Math.floor(Math.random() * tPD_MAX)
         // 用户文案输出至每一行
         uPassData[uRandom].forEach(function (v) {
-            userText.innerHTML += v
+            userText.innerHTML += '<span>' + v + '</span>'
         })
         // 教师文案输出至每一行
         tPassData[tRandom].forEach(function (v) {
-            teacherText.innerHTML += v
+            teacherText.innerHTML += '<span>' + v + '</span>'
         })
     }
 }
@@ -99,6 +99,14 @@ function renderInfo () {
     if (status == 1) pass.style.display = 'block'
     // 渲染用户文案
     // 渲染教师文案
+    // 渲染二维码
+    var cet4qr = document.getElementById('cet4qr')
+    var cet6qr = document.getElementById('cet6qr')
+    if (level == 6) {
+        cet6qr.style.display = 'block'
+    } else {
+        cet4qr.style.display = 'block'
+    }
 }
 
 // 将整个页面输出成图片
