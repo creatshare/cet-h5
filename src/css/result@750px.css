@@ -15,16 +15,15 @@
 #rMain #result #resBody {
     width: 100%;
     height: 75%;
-    background-color: #fefa5c;
 }
 
-#rMain #result #resBody #status {
+#rMain #result #resBody .status {
     position: relative;
     float: right;
     width: 20%;
 }
 
-#rMain #result #resBody #status img {
+#rMain #result #resBody .status img {
     width: 100%;
     height: auto;
 }
@@ -38,9 +37,8 @@
 
 /* 预测随机文案 */
 #rMain #result #resBody p {
-    padding-top: 20%;
+    padding: 15% 1em 0 1em;
     text-align: center;
-    line-height: 56px;
 }
 
 #rMain #result #resBody p span {
@@ -51,7 +49,7 @@
 #rMain #result #resBody p b {
     display: inline-block;
     margin-top: 60px;
-    font-size: 72px;
+    font-size: 68px;
 }
 
 #rMain #result #resFooter {
@@ -67,6 +65,7 @@
     padding-left: 20px;
     padding-top: 33px;
     font-size: 36px;
+    width: 72%;
 }
 
 #rMain #result #resFooter #resLeft span {

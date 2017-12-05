@@ -16,26 +16,26 @@
                 <div id="result">
                     <section id="resBody">
                         <!-- 预测印章 -->
-                        <picture id="status">
+                        <!-- 没通过，印章 -->
+                        <picture id="loser" class="status" style="display: none">
                             <source media="(max-width: 749px)" srcset="./img/loser@1x.png">
                             <source media="(min-width: 750px)" srcset="./img/loser@2x.png">
                             <img src="./img/loser@2x.png">
                         </picture>
+                        <!-- 通过，印章 -->
+                        <picture id="pass" class="status" style="display: none">
+                            <source media="(max-width: 749px)" srcset="./img/pass@1x.png">
+                            <source media="(min-width: 750px)" srcset="./img/pass@2x.png">
+                            <img src="./img/pass@2x.png">
+                        </picture>
                         <!-- 你的 CET 预测结果 -->
-                        <h1>姬无命 CET4 预测结果</h1>
+                        <h1><span id="nameText"></span> <span id="levelText"></span> 预测结果</h1>
                         <!-- 预测随机文案 -->
-                        <p>
-                            <span>你是不是</span>
-                            <span>比国家总理都忙，</span>
-                            <span><b>下次再来吧！</b></span>
-                        </p>
+                        <p id="userText"></p>
                     </section>
                     <section id="resFooter">
-                        <div id="resLeft">
-                            <span>哎，</span>
-                            <span>你的守护老师都飞走了</span>
-                            <span>骚骚骚骚骚所</span>
-                        </div>
+                        <!-- 教师文案随机渲染 -->
+                        <div id="resLeft"></div>
                         <div id="resRight">
                             <picture id="qr">
                                 <source media="(max-width: 749px)" srcset="./img/qr@1x.png">

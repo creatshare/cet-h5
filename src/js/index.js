@@ -1,3 +1,5 @@
+window.onload = function () { judgeLevel() }
+
 // 入口判断四六级状态
 function judgeLevel () {
     // search = '?level=4' || '?level=6'
@@ -41,5 +43,3 @@ function postInfo () {
     saveInfo(null, name, teacher)
     window.location.href = './result.html'
 }
-
-window.onload = function () { judgeLevel() }
