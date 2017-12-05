@@ -6,15 +6,21 @@
         <link rel="stylesheet" href="./css/_base.css">
         <link rel="stylesheet" href="./css/index@750px.css" media="all and (min-width: 750px)">
         <link rel="stylesheet" href="./css/index@749px.css" media="all and (max-width: 749px)">
-        <script src="./js/_base.js"></script>
+        <script src="./js/_base.js" defer></script>
     </head>
     <body>
         <header id="iHeader">
             <!-- 测测你四级能过嘛 -->
-            <picture id="cet4">
+            <picture id="cet4" class="cet" style="display: none">
                 <source media="(max-width: 749px)" srcset="./img/cet4@1x.png">
                 <source media="(min-width: 750px)" srcset="./img/cet4@2x.png">
                 <img src="./img/cet4@2x.png">
+            </picture>
+            <!-- 测测你的六级能过嘛 -->
+            <picture id="cet6" class="cet" style="display: none">
+                <source media="(max-width: 749px)" srcset="./img/cet6@1x.png">
+                <source media="(min-width: 750px)" srcset="./img/cet6@2x.png">
+                <img src="./img/cet6@2x.png">
             </picture>
             <div class="clear"></div>
             <picture id="Vector">

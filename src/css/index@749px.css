@@ -3,14 +3,14 @@
     height: 25vh;
 }
 
-#iHeader #cet4 {
+#iHeader .cet {
     display: block;
     float: right;
     margin-top: 3em;
     width: 92vw;
 }
 
-#iHeader #cet4 img {
+#iHeader .cet img {
     width: 100%;
 }
 
@@ -24,7 +24,7 @@
 #iMain {
     display: block;
     height: 60vh;
-    margin-top: 1em;
+    margin-top: 1.5em;
 }
 
 #iMain #section {

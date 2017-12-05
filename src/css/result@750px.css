@@ -49,7 +49,7 @@
 }
 
 #rMain #result #resBody p b {
-        display: block;
+    display: inline-block;
     margin-top: 60px;
     font-size: 72px;
 }
@@ -69,11 +69,15 @@
     font-size: 36px;
 }
 
+#rMain #result #resFooter #resLeft span {
+    display: block;
+}
+
 #rMain #result #resFooter #resRight {
     position: relative;
     float: right;
     height: 100%;
-    width: 33%;
+    width: 24%;
     display: flex;
     justify-content: center;
     align-items: center;

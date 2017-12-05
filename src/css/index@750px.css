@@ -3,10 +3,11 @@
     height: 25vh;
 }
 
-#iHeader #cet4 {
+#iHeader .cet {
     display: block;
     float: right;
     margin-top: 3em;
+    width: 92vw;
 }
 
 #iHeader #Vector {
