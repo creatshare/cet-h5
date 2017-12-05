@@ -51,12 +51,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 88%;
+    width: 82%;
 }
 
 #iMain .field picture {
-    display: inline-block;
     height: 7vh;
+    flex: 1;
+}
+
+#iMain .field select {
+    height: 6.5vh;
+    width: 45%;
+    border: #333 solid 3px;
+    border-radius: 6px;
+    font-size: 24px;
+    color: #333;
+    flex: 1;
 }
 
 #iMain .field picture img {
@@ -67,15 +77,13 @@
 }
 
 #iMain .field input {
-    display: inline-block;
-    height: 7vh;
+    height: 6.5vh;
     width: 45%;
-    border: #333 solid 5px;
-    border-radius: 12px;
-    margin-left: 1em;
+    border: #333 solid 3px;
+    border-radius: 6px;
     font-size: 24px;
-    padding-left: 10px;
     color: #333;
+    flex: 1;
 }
 
 /* 449px 以下时的输入框内容 */

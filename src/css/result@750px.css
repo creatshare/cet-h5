@@ -65,8 +65,8 @@
     float: left;
     padding-left: 20px;
     padding-top: 33px;
-    font-size: 36px;
-    width: 72%;
+    font-size: 32px;
+    width: 66%;
 }
 
 #rMain #result #resFooter #resLeft span {
@@ -74,6 +74,7 @@
 }
 
 #rMain #result #resFooter #resRight {
+    padding-top: .5em;
     position: relative;
     float: right;
     height: 100%;

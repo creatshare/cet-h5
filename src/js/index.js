@@ -1,4 +1,7 @@
-window.onload = function () { judgeLevel() }
+window.onload = function () {
+    localStorage.clear()
+    judgeLevel()
+}
 
 // 入口判断四六级状态
 function judgeLevel () {
@@ -22,6 +25,32 @@ function judgeLevel () {
     }
 }
 
+// 改变选择守护老师的 select 时
+function changeSelect () {
+    var select = document.getElementById('select')
+    var nowValue = select.value
+    var teacherInput = document.getElementById('teacherInput')
+    switch (nowValue) {
+        // 当选择了“请选择”时
+        case 'please':
+            localStorage.removeItem('teacher')
+            return
+        // 当选择“其他”时候
+        case 'other':
+            // 置空隐藏的老师
+            document.getElementById('inputTeacher').value = ''
+            teacherInput.style.display = 'flex'
+            localStorage.removeItem('teacher')
+            return
+        // 当选择了提供的老师选项时
+        default:
+            teacherInput.style.display = 'none'
+            // 填写到没有显示的输入框中
+            document.getElementById('inputTeacher').value = nowValue
+            return
+    }
+}
+
 // 保存相关信息到 localStorage 中
 function saveInfo (level, name, teacher) {
     if (level) localStorage.setItem('level', level)
@@ -35,7 +64,7 @@ function postInfo () {
     var teacher = document.getElementById('inputTeacher').value.trim()
     if (!name) {
         alert('请输入你的名字哈！')
-        return 
+        return
     } else if (!teacher) {
         alert('请输入守护老师的名字哈！')
         return

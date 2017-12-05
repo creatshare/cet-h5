@@ -40,16 +40,31 @@
                             <source media="(min-width: 750px)" srcset="./img/name@2x.png">
                             <img src="./img/name@2x.png">
                         </picture>
-                        <input id="inputName" type="text"/>
+                        <input id="inputName" type="text" placeholder="请输入"/>
                     </div>
-                    <!-- 守护老师 -->
+                    <!-- 守护老师，下拉框 -->
                     <div class="field">
                         <picture id="teacher">
                             <source media="(max-width: 749px)" srcset="./img/teacher@1x.png">
                             <source media="(min-width: 750px)" srcset="./img/teacher@2x.png">
                             <img src="./img/teacher@2x.png">
                         </picture>
-                        <input id="inputTeacher" type="text"/>
+                        <select id="select" required onchange="changeSelect()">
+                            <option value ="please">请选择</option>
+                            <option value ="张小蹦">张小蹦</option>
+                            <option value ="姬无命">姬无命</option>
+                            <option value="喵爷爷">喵爷爷</option>
+                            <option value="other">其他</option>
+                        </select>
+                    </div>
+                    <!-- 守护老师，填写其他 -->
+                    <div id="teacherInput" class="field" style="display: none">
+                        <picture>
+                            <source media="(max-width: 749px)" srcset="./img/teacher@1x.png">
+                            <source media="(min-width: 750px)" srcset="./img/teacher@2x.png">
+                            <img src="./img/teacher@2x.png">
+                        </picture>
+                        <input id="inputTeacher" type="text" placeholder="请输入"/>
                     </div>
                 </div>
             </div>

@@ -67,7 +67,7 @@
     padding-left: 10px;
     padding-top: 10px;
     font-size: 16px;
-    width: 72%;
+    width: 66%;
 }
 
 #rMain #result #resFooter #resLeft span {
@@ -75,10 +75,11 @@
 }
 
 #rMain #result #resFooter #resRight {
+    padding-top: .25em;
     position: relative;
     float: right;
     height: 100%;
-    width: 24%;
+    width: 30%;
 }
 
 #rMain #result #resFooter #resRight .qr {
@@ -90,6 +91,7 @@
 
 #rMain #result #resFooter #resRight .qr img {
     height: 100%;
+    max-width: 100%;
     width: auto;
 }
 

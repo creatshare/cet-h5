@@ -1,8 +1,8 @@
 // 从全局对象中读取文案数据
 var uLoserData = window.uLoserData
-var tLoserData = window.tLoserData
-var uPassData = window.uPassData
 var tPassData = window.tPassData
+var uPassData = window.uPassData
+var tLoserData = window.tLoserData
 
 // 从 localStorage 中读取用户信息
 var level = localStorage.getItem('level')
@@ -35,39 +35,39 @@ function saveRandom () {
     if (status == 0) {
         // 没通过时的渲染
         var uLD_MAX = uLoserData.length
+        var tPD_MAX = tLoserData.length
         var uRandom = Math.floor(Math.random() * uLD_MAX)
-        // 输出至每一行
+        var tRandom = Math.floor(Math.random() * tPD_MAX)
+        // 用户文案输出至每一行
         uLoserData[uRandom].forEach(function (v) {
             userText.innerHTML += '<span>' + v + '</span>'
         })
-        if (!tLoserData.hasOwnProperty(teacher)) {
-            // 没有这个老师的相应文案时，使用第一条通用文案库，在其中随机文案
-            var tLD_MAX = tLoserData['XXX'].length
-            var tRandom = Math.floor(Math.random() * tLD_MAX)
-            var tText = tLoserData['XXX'][tRandom].replace('XXX', teacher)
-            teacherText.innerHTML = tText
-        } else {
-            // 有这个老师的文案时
-            var tLD_MAX = tLoserData[teacher].length
-            var tRandom = Math.floor(Math.random() * tLD_MAX)
-            var tText = tLoserData[teacher][tRandom]
-            teacherText.innerHTML = '<span>' + tText + '</span>'
-        }
+        // 教师文案输出至每一行
+        tLoserData[tRandom].forEach(function (v) {
+            teacherText.innerHTML += '<span>' + v + '</span>'
+        })
         return
     } else {
         // 通过时的渲染
         var uPD_MAX = uPassData.length
-        var tPD_MAX = tPassData.length
         var uRandom = Math.floor(Math.random() * uPD_MAX)
-        var tRandom = Math.floor(Math.random() * tPD_MAX)
         // 用户文案输出至每一行
         uPassData[uRandom].forEach(function (v) {
             userText.innerHTML += '<span>' + v + '</span>'
         })
-        // 教师文案输出至每一行
-        tPassData[tRandom].forEach(function (v) {
-            teacherText.innerHTML += '<span>' + v + '</span>'
-        })
+        if (!tPassData.hasOwnProperty(teacher)) {
+            // 没有这个老师的相应文案时，使用第一条通用文案库，在其中随机文案
+            var tLD_MAX = tPassData['XXX'].length
+            var tRandom = Math.floor(Math.random() * tLD_MAX)
+            var tText = tPassData['XXX'][tRandom].replace('XXX', teacher)
+            teacherText.innerHTML = tText
+        } else {
+            // 有这个老师的文案时
+            var tLD_MAX = tPassData[teacher].length
+            var tRandom = Math.floor(Math.random() * tLD_MAX)
+            var tText = tPassData[teacher][tRandom]
+            teacherText.innerHTML = '<span>' + tText + '</span>'
+        }
     }
 }
 

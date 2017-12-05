@@ -34,7 +34,7 @@
 #iMain .fieldWrap {
     height: 60%;
     width: 100%;
-    padding-top: 100px;
+    padding-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,11 +43,27 @@
 
 #iMain .field {
     flex: 1;
-    width: 720px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 620px;
+    position: relative;
+    right: 20px;
 }
 
 #iMain .field picture {
-    display: inline-block;
+    height: 7vh;
+    flex: 1;
+}
+
+#iMain .field select {
+    height: 6.5vh;
+    width: 45%;
+    border: #333 solid 3px;
+    border-radius: 6px;
+    font-size: 24px;
+    color: #333;
+    flex: 1;
 }
 
 #iMain .field img {
@@ -58,15 +74,13 @@
 }
 
 #iMain .field input {
-    display: inline-block;
-    height: 7vh;
+    height: 6.5vh;
     width: 45%;
-    border: #333 solid 5px;
-    border-radius: 12px;
-    margin-left: 2em;
+    border: #333 solid 3px;
+    border-radius: 6px;
     font-size: 24px;
-    padding-left: 10px;
     color: #333;
+    flex: 1;
 }
 
 #iMain #button {
