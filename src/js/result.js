@@ -13,12 +13,13 @@ window.onload = function () {
     assertLS()
     saveRandom ()
     renderInfo()
-    drawPage()
+    // drawPage()
 }
 
 // 首页加载时查看 localStorage 中是否有内容
 function assertLS () {
     if (!level || !name || !teacher) {
+        alert('请先填写你的信息')
         window.location.href = './index.html'
     }
 }
@@ -28,10 +29,9 @@ function saveRandom () {
     // 生成 0 或 1 的随机数，0 代表没通过，1 代表通过
     var status = Math.ceil(Math.random() * 2) - 1
     localStorage.setItem('status', status)
-    // userText 里渲染用户文案
-    var userText = document.getElementById('userText')
-    // teacherText 里渲染教师文案
-    var teacherText = document.getElementById('resLeft')
+    // userText、teacherText 分别存储用户、教师文案到 localStorage
+    var userText = ''
+    var teacherText = ''
     if (status == 0) {
         // 没通过时的渲染
         var uLD_MAX = uLoserData.length
@@ -40,12 +40,15 @@ function saveRandom () {
         var tRandom = Math.floor(Math.random() * tPD_MAX)
         // 用户文案输出至每一行
         uLoserData[uRandom].forEach(function (v) {
-            userText.innerHTML += '<span>' + v + '</span>'
+            userText += '<span>' + v + '</span>'
         })
         // 教师文案输出至每一行
         tLoserData[tRandom].forEach(function (v) {
-            teacherText.innerHTML += '<span>' + v + '</span>'
+            teacherText += '<span>' + v + '</span>'
         })
+        // 存储文案
+        localStorage.setItem('userText', userText)
+        localStorage.setItem('teacherText', teacherText)
         return
     } else {
         // 通过时的渲染
@@ -53,21 +56,24 @@ function saveRandom () {
         var uRandom = Math.floor(Math.random() * uPD_MAX)
         // 用户文案输出至每一行
         uPassData[uRandom].forEach(function (v) {
-            userText.innerHTML += '<span>' + v + '</span>'
+            userText += '<span>' + v + '</span>'
         })
         if (!tPassData.hasOwnProperty(teacher)) {
             // 没有这个老师的相应文案时，使用第一条通用文案库，在其中随机文案
             var tLD_MAX = tPassData['XXX'].length
             var tRandom = Math.floor(Math.random() * tLD_MAX)
             var tText = tPassData['XXX'][tRandom].replace('XXX', teacher)
-            teacherText.innerHTML = tText
+            teacherText = tText
         } else {
             // 有这个老师的文案时
             var tLD_MAX = tPassData[teacher].length
             var tRandom = Math.floor(Math.random() * tLD_MAX)
             var tText = tPassData[teacher][tRandom]
-            teacherText.innerHTML = '<span>' + tText + '</span>'
+            teacherText = '<span>' + tText + '</span>'
         }
+        // 存储文案
+        localStorage.setItem('userText', userText)
+        localStorage.setItem('teacherText', teacherText)
     }
 }
 
@@ -98,15 +104,13 @@ function renderInfo () {
     // 通过，渲染 pass 印章
     if (status == 1) pass.style.display = 'block'
     // 渲染用户文案
+    var userText = document.getElementById('userText')
+    var uText = localStorage.getItem('userText')
+    userText.innerHTML = uText
     // 渲染教师文案
-    // 渲染二维码
-    var cet4qr = document.getElementById('cet4qr')
-    var cet6qr = document.getElementById('cet6qr')
-    if (level == 6) {
-        cet6qr.style.display = 'block'
-    } else {
-        cet4qr.style.display = 'block'
-    }
+    var teacherText = document.getElementById('resLeft')
+    var tText = localStorage.getItem('teacherText')
+    teacherText.innerHTML = tText
 }
 
 // 将整个页面输出成图片
