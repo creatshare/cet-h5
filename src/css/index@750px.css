@@ -19,7 +19,7 @@
 #iMain {
     display: block;
     height: 60vh;
-    margin-top: 4em;
+    margin-top: 3em;
 }
 
 #iMain #section {
@@ -52,12 +52,12 @@
 }
 
 #iMain .field picture {
-    height: 7vh;
+    height: 60px;
     flex: 1;
 }
 
 #iMain .field select {
-    height: 6.5vh;
+    height: 60px;
     width: 45%;
     border: #333 solid 3px;
     border-radius: 6px;
@@ -67,14 +67,12 @@
 }
 
 #iMain .field img {
-    height: 4vh;
+    height: 80%;
     width: auto;
-    position: relative;
-    top: 1vh;
 }
 
 #iMain .field input {
-    height: 6.5vh;
+    height: 60px;
     width: 45%;
     border: #333 solid 3px;
     border-radius: 6px;

@@ -1,6 +1,7 @@
 #iHeader {
     display: block;
     height: 25vh;
+    min-height: 145px;
 }
 
 #iHeader .cet {
@@ -24,20 +25,21 @@
 #iMain {
     display: block;
     height: 60vh;
+    min-width: 180px;
     margin-top: 1.5em;
 }
 
 #iMain #section {
-    height: 33.3vh;
+    height: 288px;
     text-align: center;
     background-image: url(../img/section@2x.png);
     background-position: top;
     background-repeat: no-repeat;
-    background-size: 96vw 33.3vh;
+    background-size: 96vw 333px;
 }
 
 #iMain .fieldWrap {
-    height: 60%;
+    height: 72%;
     width: 100%;
     padding-top: 25px;
     display: flex;
@@ -55,29 +57,21 @@
 }
 
 #iMain .field picture {
-    height: 7vh;
+    height: 60px;
+    width: 50%;
     flex: 1;
-}
-
-#iMain .field select {
-    height: 6.5vh;
-    width: 45%;
-    border: #333 solid 3px;
-    border-radius: 6px;
-    font-size: 24px;
-    color: #333;
-    flex: 1;
+    margin-right: 10px;
 }
 
 #iMain .field picture img {
-    height: 4vh;
-    width: auto;
+    height: 60%;
+    width: 100%;
     position: relative;
-    top: 1vh;
+    top: .8em;
 }
 
-#iMain .field input {
-    height: 6.5vh;
+#iMain .field select {
+    height: 60px;
     width: 45%;
     border: #333 solid 3px;
     border-radius: 6px;
@@ -86,33 +80,14 @@
     flex: 1;
 }
 
-/* 449px 以下时的输入框内容 */
-@media all and (max-width: 319px) {
-    #iMain .field {
-        display: block;
-    }
-
-    #iMain .field picture {
-        display: block;
-        height: 5.5vh;
-    }
-
-    #iMain .field picture img {
-        height: 4vh;
-        width: auto;
-        max-width: 88%;
-        position: relative;
-        top: 1vh;
-    }
-
-    #iMain .field input {
-        display: block;
-        margin: 0 auto;
-        width: 88%;
-        border: #333 solid 5px;
-        position: relative;
-        right: 3px;
-    }
+#iMain .field input {
+    height: 60px;
+    width: 45%;
+    border: #333 solid 3px;
+    border-radius: 6px;
+    font-size: 24px;
+    color: #333;
+    flex: 1;
 }
 
 #iMain #button {
@@ -125,7 +100,7 @@
 #iMain #button img {
     cursor: pointer;
     width: 45%;
-    min-width: 144px;
+    min-width: 180px;
 }
 
 #iFooter {
