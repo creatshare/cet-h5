@@ -111,13 +111,28 @@ function renderInfo () {
 // 将整个页面输出成图片
 function drawPage () {
     var rScreen = document.getElementById('rScreen')
+
+    var canvas = document.createElement('canvas')
+    var height = rScreen.offsetHeight
+    var width = rScreen.offsetWidth
+    var scale = 2
+    canvas.height = height * scale
+    canvas.width = width * scale
+    canvas.getContext("2d").scale(scale, scale)
+    
     html2canvas(rScreen, {
+        scale: scale, 
+        canvas: canvas, 
         logging: true,
+        height: height,
+        width: width, 
         allowTaint: true
     }).then(function(canvas) {
         var h5Img = document.createElement('img')
         var base64Url = canvas.toDataURL("image/png")
         h5Img.setAttribute('crossorigin', 'anonymous')
+        h5Img.style.height = canvas.height / 2 + "px"
+        h5Img.style.weight = canvas.weight / 2 + "px"
         h5Img.src = base64Url
         // 用图片替换 DOM 结点
         rScreen.parentNode.replaceChild(h5Img, rScreen)
