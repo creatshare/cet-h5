@@ -30,51 +30,51 @@ function saveRandom () {
     var status = Math.ceil(Math.random() * 2) - 1
     localStorage.setItem('status', status)
     // userText、teacherText 分别存储用户、教师文案到 localStorage
-    var userText = ''
-    var teacherText = ''
     if (status == 0) {
-        // 没通过时的渲染
-        var uLD_MAX = uLoserData.length
-        var tPD_MAX = tLoserData.length
-        var uRandom = Math.floor(Math.random() * uLD_MAX)
-        var tRandom = Math.floor(Math.random() * tPD_MAX)
-        // 用户文案输出至每一行
-        uLoserData[uRandom].forEach(function (v) {
-            userText += '<span>' + v + '</span>'
-        })
-        // 教师文案输出至每一行
-        tLoserData[tRandom].forEach(function (v) {
-            teacherText += '<span>' + v + '</span>'
-        })
-        // 存储文案
+        // 没通过时的渲染用户、教师文案
+        var userText = getUserRandom(uLoserData)
+        var teacherText = getTeacherRandom(tLoserData)
         localStorage.setItem('userText', userText)
         localStorage.setItem('teacherText', teacherText)
         return
     } else {
-        // 通过时的渲染
-        var uPD_MAX = uPassData.length
-        var uRandom = Math.floor(Math.random() * uPD_MAX)
-        // 用户文案输出至每一行
-        uPassData[uRandom].forEach(function (v) {
-            userText += '<span>' + v + '</span>'
-        })
-        if (!tPassData.hasOwnProperty(teacher)) {
-            // 没有这个老师的相应文案时，使用第一条通用文案库，在其中随机文案
-            var tLD_MAX = tPassData['XXX'].length
-            var tRandom = Math.floor(Math.random() * tLD_MAX)
-            var tText = tPassData['XXX'][tRandom].replace('XXX', teacher)
-            teacherText = tText
-        } else {
-            // 有这个老师的文案时
-            var tLD_MAX = tPassData[teacher].length
-            var tRandom = Math.floor(Math.random() * tLD_MAX)
-            var tText = tPassData[teacher][tRandom]
-            teacherText = '<span>' + tText + '</span>'
-        }
-        // 存储文案
+        // 通过时的渲染用户、教师文案
+        var userText = getUserRandom(uPassData)
+        var teacherText = getTeacherRandom(tPassData)
         localStorage.setItem('userText', userText)
         localStorage.setItem('teacherText', teacherText)
+        return
     }
+}
+
+// 返回随机用户文案，参数可为 uLoserData、uPassData，是数组
+function getUserRandom (uData) {
+    var userText = ''
+    var uD_MAX = uData.length
+    var uRandom = Math.floor(Math.random() * uD_MAX)
+    // 读取某用户文案的每一行
+    uData[uRandom].forEach(function (v) {
+        userText += '<span>' + v + '</span>'
+    })
+    return userText
+}
+
+// 根据具体教师返回随机文案，参数可为 tLoserData、tPassData，是对象
+function getTeacherRandom (tData) {
+    if (!tData.hasOwnProperty(teacher)) {
+        // 没有这个老师的相应文案时，使用第一条通用文案库，在其中随机文案
+        var tD_MAX = tData['XXX'].length
+        var tRandom = Math.floor(Math.random() * tD_MAX)
+        var tText = tData['XXX'][tRandom].replace('XXX', teacher)
+        teacherText = tText
+    } else {
+        // 有这个老师的文案时
+        var tD_MAX = tData[teacher].length
+        var tRandom = Math.floor(Math.random() * tD_MAX)
+        var tText = tData[teacher][tRandom]
+        teacherText = '<span>' + tText + '</span>'
+    }
+    return teacherText
 }
 
 // 根据用户信息渲染 DOM
@@ -82,13 +82,8 @@ function renderInfo () {
     // 渲染卡片背景颜色
     var resBody = document.getElementById('resBody')
     var status = localStorage.getItem('status')
-    if (status == 0) {
-        // 未通过，黄色
-        resBody.style.backgroundColor = '#fefa5c'
-    } else {
-        // 通过，蓝色
-        resBody.style.backgroundColor = '#00ffea'
-    }
+    // 未通过，黄色；通过，蓝色
+    resBody.style.backgroundColor = (status == 0) ? '#fefa5c' : '#00ffea'
     // 渲染名字
     var nameText = document.getElementById('nameText')
     nameText.innerHTML = name
