@@ -61,18 +61,24 @@ function getUserRandom (uData) {
 
 // 根据具体教师返回随机文案，参数可为 tLoserData、tPassData，是对象
 function getTeacherRandom (tData) {
+    var teacherText = ''
     if (!tData.hasOwnProperty(teacher)) {
         // 没有这个老师的相应文案时，使用第一条通用文案库，在其中随机文案
         var tD_MAX = tData['XXX'].length
         var tRandom = Math.floor(Math.random() * tD_MAX)
-        var tText = tData['XXX'][tRandom].replace('XXX', teacher)
-        teacherText = tText
+        var tTextArr = tData['XXX'][tRandom]
+        tTextArr.forEach(function (v) {
+            v = v.replace('XXX', teacher)
+            teacherText += '<span>' + v + '</span>'
+        })
     } else {
         // 有这个老师的文案时
         var tD_MAX = tData[teacher].length
         var tRandom = Math.floor(Math.random() * tD_MAX)
-        var tText = tData[teacher][tRandom]
-        teacherText = '<span>' + tText + '</span>'
+        var tTextArr = tData[teacher][tRandom]
+        tTextArr.forEach(function (v) {
+            teacherText += '<span>' + v + '</span>'
+        })
     }
     return teacherText
 }
